@@ -1,0 +1,46 @@
+name: Server CI/CD
+
+on:
+  push:
+    paths:
+      - 'server/**'
+  pull_request:
+    paths:
+      - 'server/**'
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint --if-present
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build (if you have build step)
+        run: npm run build --if-present
+
+  trigger-render-deploy:
+    needs: build-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Trigger Render deploy (deploy hook)
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
