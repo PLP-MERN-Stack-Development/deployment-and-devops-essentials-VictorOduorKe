@@ -43,4 +43,4 @@ See `.github/workflows/ci.yml`.
 - Monitoring via Render dashboard logs and uptime checks
 - health check image
 
-[Health check image](./images/health.png)
+(Health check image)[./images/health.png]
