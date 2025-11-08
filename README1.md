@@ -14,6 +14,10 @@ A full-stack blog application built with the MERN (MongoDB, Express.js, React.js
 *   **Form Validation**: Robust input validation on both client and server sides using Joi.
 *   **Centralized State Management**: Utilizes React Context API for authentication and notifications.
 
+## VISIT LIVE HOSTED PROJECT
+(Visit live website)[https://blog-post-ecru.vercel.app]
+
+
 ## 🚀 Technologies Used
 
 ### Frontend (Client)
