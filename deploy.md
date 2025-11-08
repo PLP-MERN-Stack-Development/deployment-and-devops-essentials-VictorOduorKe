@@ -41,6 +41,8 @@ See `.github/workflows/ci.yml`.
 ## 🩺 Monitoring
 - Health check endpoint: `/api/health`
 - Monitoring via Render dashboard logs and uptime checks
+- <img src='./images/render.png'/>
+
 - health check image
 
 <img src='./images/health.png'/>
