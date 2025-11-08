@@ -67,6 +67,12 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 5. Include screenshots of your CI/CD pipeline in action
 6. Add URLs to your deployed applications
 
+## backend url
+- [Backedn Api url](https://deployment-and-devops-essentials-985a.onrender.com)
+
+## frontend Api url
+[Frontend API url](https://blog-post-ecru.vercel.app)
+
 ## Resources
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
