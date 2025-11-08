@@ -36,7 +36,7 @@ jobs:
       - name: Build app
         run: npm run build
 
-  # Optional: Deploy to Vercel using CLI/Token (uncomment to enable)
+  Optional: Deploy to Vercel using CLI/Token (uncomment to enable)
   deploy-vercel:
     needs: build-test
     runs-on: ubuntu-latest
